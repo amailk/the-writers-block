@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+    -webkit-filter: grayscale(100%);
+}
+
+.writer-header {
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px auto;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Poiret One', cursive;
+    color: white;
+    letter-spacing: 40px;
+    text-shadow: 2px 2px #ccc;
+}
+
+.blog-enter {
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fa-cog {
+    color: gray;
+    opacity: 0.75;
+    color: rgba(0,0,0,0.75);
+}
+
+.fa-cog:hover {
+    color:black;
+}

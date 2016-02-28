@@ -1,0 +1,33 @@
+.writer-header {
+    font-family: 'Poiret One';
+
+    letter-spacing:5px;
+}
+
+h1 {
+    margin-top:0px;
+
+}
+
+.social-header {
+    text-align: right;
+}
+
+.fa-cog {
+    color: gray;
+    opacity: 0.75;
+    color: rgba(0,0,0,0.75);
+}
+
+.fa-cog:hover {
+    color:black;
+}
+
+.instagram {
+    margin-left:5px;
+}
+
+form {
+    display: inline-block;
+}
+
