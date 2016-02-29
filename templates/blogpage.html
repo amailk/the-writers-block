@@ -39,52 +39,57 @@
 
 
     <div class="container">
-        <form action="/blogpost" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="titleInput"> Title </label>
-                <input name="title" id="titleInput" placeholder="Title" class="form-control"</input>
-                {% if invalidTitle %}
+        <div class="text-center">
+            <form action="/blogpost" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="titleInput"> Title </label>
+                    <input name="title" id="titleInput" placeholder="Title" class="form-control"</input>
+                    {% if invalidTitle %}
+                        <div class="alert alert-danger" role="alert">
+                            <p>Sorry, Your Title is invalid!</p>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class= "post form-group">
+                    <label for="postInput"> Blog Post </label>
+                    <textarea name="post" id="postInput" placeholder="Blog Post" class="form-control" rows="10"></textarea>
+                    {% if invalidbPost %}
                     <div class="alert alert-danger" role="alert">
-                        <p>Sorry, Your Title is invalid!</p>
+                        <p> Sorry, your Blog Post is invalid!</p>
                     </div>
-                {% endif %}
-            </div>
-
-            <div class= "post form-group">
-                <label for="postInput"> Blog Post </label>
-                <textarea name="post" id="postInput" placeholder="Blog Post" class="form-control" rows="10"></textarea>
-                {% if invalidbPost %}
-                <div class="alert alert-danger" role="alert">
-                    <p> Sorry, your Blog Post is invalid!</p>
+                    {% endif %}
                 </div>
-                {% endif %}
-            </div>
 
-            <div class="form-group">
-                <input type = "file" name="photo" id = "photo">
-                {% if invalidPhoto %}
-                <div class="alert alert-danger" role="alert">
-                    <p> Please upload a photo and try again! </p>
+                <div class="form-group">
+                    <input type = "file" name="photo" id = "photo">
+                    {% if invalidPhoto %}
+                    <div class="alert alert-danger" role="alert">
+                        <p> Please upload a photo and try again! </p>
+                    </div>
+                    {% endif %}
                 </div>
-                {% endif %}
-            </div>
-            <button type="submit" class="btn btn-default">Post</button>
-        </form>
+                <button type="submit" class="btn btn-default">Post</button>
+            </form>
+        </div>
     </div>
-
+<br>
 
 
     {% if blogposts %}
         <div class= "container" id="post" class="page-header">
             <div class="row">
                 {% for blogpost in blogposts %}
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         <div class="thumbnail">
-                            <img src="/images?photo_key={{blogpost.photo_key}}" alt="Photo of {{blogpost.place}}" height= "280px" class="img-rounded"> </img>
                             <div class="caption">
                                 <h3> {{blogpost.title}} </h3> {{blogpost.date_text}}
+
+                                <img src="/images?photo_key={{blogpost.photo_key}}" alt="Photo of {{blogpost.place}}"class="img-responsive"> </img>
                                 <blockquote><p> {{blogpost.post}} </p></blockquote>
                             </div>
+
+
                         </div>
                     </div>
                     {% if loop.index is divisibleby 3 %}
