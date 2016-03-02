@@ -29,5 +29,22 @@ h1 {
 
 form {
     display: inline-block;
+    float:right;
 }
 
+.image {
+    width:200px;
+    height:200px;
+    float: left;
+    margin:0 20px 20px 0;
+}
+
+.text {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.headerimage {
+    height: 397px;
+    width:860px;
+}
