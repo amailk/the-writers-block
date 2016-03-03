@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="../stylesheets/blogpage.css" rel="stylesheet">
+    <script src="../scripts/myjs.js"></script>
 </head>
 <body>
     <div class="container">
@@ -89,8 +90,10 @@
                                 <h6>{{blogpost.date_text}}</h6>
                             </div>
 
-                            <img src="/images?photo_key={{blogpost.photo_key}}" alt="Photo of {{blogpost.place}}"class="image img-responsive"> </img>
-                            <blockquote><p class="text"> {{blogpost.post}} </p></blockquote>
+                            <div class="content">
+                                <img src="/images?photo_key={{blogpost.photo_key}}" alt="Photo of {{blogpost.place}}"class="image img-responsive"> </img>
+                                <blockquote><p class="text"> {{blogpost.post}} </p></blockquote>
+                            </div>
 
                         </div>
                     </div>
