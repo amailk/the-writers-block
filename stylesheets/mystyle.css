@@ -31,10 +31,10 @@ video {
 
 h1 {
     font-size: 100px;
-    font-family: 'Poiret One', cursive;
+    font-family: 'Inherit';
     color: white;
     letter-spacing: 40px;
-    text-shadow: 2px 2px #ccc;
+    text-shadow: 1px 1px #ccc;
 }
 
 .blog-enter {
